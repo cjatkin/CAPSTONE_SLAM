@@ -25,24 +25,64 @@ Open the Ubuntu installation from the app store. Enter a username and password f
 
 ### Git
 
-`sudo apt-get update`
-`sudo apt-get install get`
+`sudo apt-get update`\
+`sudo apt-get install get`\
 `sudo apt-get instal gitk git-gui`
 
 ### Clone the ArduPilot repository
 
-Clone the ArduPilot code form the main repository
+Clone the ArduPilot code form the main repository\
 `https://github.com/ArduPilot/ardupilot.git` Link to the github
 
-In the command line:
-`git clone –recurse-submodules https://github.com/ArduPilot/ardupilot.git`
+In the command line:\
+`git clone –recurse-submodules https://github.com/ArduPilot/ardupilot.git`\
 `cd ardupilot`
 
-For debian based systems there is a script that will install all of the required packages
+For debian based systems there is a script that will install all of the required packages\
 `Tools/environment_install/install-prereqs-ubuntu.sh -y`
 
-Reload the path (log-out and log-in to make permanent):
+Reload the path (log-out and log-in to make permanent):\
 `. ~/.profile`
+
+## Install XWindow application
+
+Install VcXserver with default settings
+https://sourceforge.net/projects/vcxsrv/\
+
+`~/.bashrc\`
+
+`# Export Display for XWindows`\
+`# For WLS1`\
+`export DISPLAY=0:0`
+
+
+##Setting up SITL
+
+`cd arudpilot/ArduCopter`\
+`sim_vehicle.py -w`
+
+##Run Mavproxy
+
+`cd ~/ardupilot/ArduCopter`\
+`../Tools/autotest/sim_vehicle.py --map --console`
+
+
+
+
+In the terminal enter\
+`Mode guided`\
+`Arm throttle`\
+`Takeoff 40`
+
+## MavProxy + AirSim
+
+In WSL\
+`sim_vehicle.py -v ArduCopter -f airsim-copter --console --map`\
+
+`Param set ARMING_CHECK 0`\
+`Mode guided`\
+`Arm throttle`\
+`Takeoff 40`
 
 
 ## Install AirSim on WSL
