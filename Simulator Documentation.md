@@ -25,26 +25,30 @@ Open the Ubuntu installation from the app store. Enter a username and password f
 
 ### Git
 
+The first step here is to set up Git so that the ArduPilot code repositry can be retrieved then built.\
+
 `sudo apt-get update`\
 `sudo apt-get install get`\
 `sudo apt-get instal gitk git-gui`
 
 ### Clone the ArduPilot repository
 
-Clone the ArduPilot code form the main repository\
+Next step is to clone the ArduPilot code form the main repository. If a custom version of ArduPilot is being ran, the link to that repositry can be used instead.\
 `https://github.com/ArduPilot/ardupilot.git` Link to the github
 
-In the command line:\
+In the command line clone the repositry to your local machine using:\
 `git clone –recurse-submodules https://github.com/ArduPilot/ardupilot.git`\
 `cd ardupilot`
 
-For debian based systems there is a script that will install all of the required packages\
+For debian based systems there is an included script that will install all of the required packages.\
 `Tools/environment_install/install-prereqs-ubuntu.sh -y`
 
-Reload the path (log-out and log-in to make permanent):\
+Reload the path (log-out and log-in to make it permanent):\
 `. ~/.profile`
 
 ## Install XWindow application
+
+Xwindow applications allow for windows with UI elements to be created when running linux from the command line.\
 
 Install VcXserver with default settings
 https://sourceforge.net/projects/vcxsrv/\
@@ -85,15 +89,6 @@ In WSL\
 `Takeoff 40`
 
 
-## Install AirSim on WSL
-
-## Install ArduPilot on WSL
-
-## Install MavLink on WSL
-
-## Install ArduPilot Copter SITL
-
-## Install MavProxy on WSL
 
 ## Setup RC Controller
 
