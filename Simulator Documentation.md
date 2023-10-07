@@ -29,7 +29,7 @@ The first step here is to set up Git so that the ArduPilot code repositry can be
 
 `sudo apt-get update`\
 `sudo apt-get install git`\
-`sudo apt-get instal gitk git-gui`
+`sudo apt-get install gitk git-gui`
 
 ### Clone the ArduPilot repository
 
