@@ -25,10 +25,10 @@ Open the Ubuntu installation from the app store. Enter a username and password f
 
 ### Git
 
-The first step here is to set up Git so that the ArduPilot code repositry can be retrieved then built.\
+The first step here is to set up Git so that the ArduPilot code repositry can be retrieved then built.
 
 `sudo apt-get update`\
-`sudo apt-get install get`\
+`sudo apt-get install git`\
 `sudo apt-get instal gitk git-gui`
 
 ### Clone the ArduPilot repository
