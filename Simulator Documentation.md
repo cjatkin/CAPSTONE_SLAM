@@ -37,7 +37,7 @@ Next step is to clone the ArduPilot code form the main repository. If a custom v
 `https://github.com/ArduPilot/ardupilot.git` Link to the github
 
 In the command line clone the repositry to your local machine using:\
-`git clone –recurse-submodules https://github.com/ArduPilot/ardupilot.git`\
+`git clone --recurse-submodules https://github.com/ArduPilot/ardupilot.git`\
 `cd ardupilot`
 
 For debian based systems there is an included script that will install all of the required packages.\
