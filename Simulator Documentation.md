@@ -53,11 +53,12 @@ Xwindow applications allow for windows with UI elements to be created when runni
 Install VcXserver with default settings
 https://sourceforge.net/projects/vcxsrv/\
 
-`~/.bashrc\`
 
 `# Export Display for XWindows`\
 `# For WLS1`\
-`export DISPLAY=0:0`
+`export DISPLAY=0:0`\
+
+Run `~/.bashrc\` to put the chagnes into effect.
 
 
 ##Setting up SITL
