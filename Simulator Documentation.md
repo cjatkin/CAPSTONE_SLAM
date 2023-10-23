@@ -84,9 +84,9 @@ In the terminal enter\
 In WSL\
 `sim_vehicle.py -v ArduCopter -f airsim-copter --console --map`\
 
-`Param set ARMING_CHECK 0`\
-`Mode guided`\
-`Arm throttle`\
+`param set ARMING_CHECK 0`\
+`mode guided`\
+`arm throttle`\
 `Takeoff 40`
 
 
