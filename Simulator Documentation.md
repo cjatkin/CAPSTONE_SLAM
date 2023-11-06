@@ -125,9 +125,41 @@ Initialize rosdep\
 `sudo rosdep init`\
 `rosdep update`
 
-## Catkin Workspace
+## ROS airsim wrapper
 
-## rviz
+The ROS airsim wrapper requires GCC version 8 or above. You can check this using `gcc -version` \
+If the GCC version is below 8, run:\
+`sudo aput-get install gcc-8 g++-8`\
+Verify the installation with `gcc-8 --version`\
 
-## Hector SLAM
+Instal tf2 sensor and mavros packages: `sudo apt-get install ros-melodic-tf2-sensor-msgs ros-melodic-tf2-geometry-msgs ros-melodic-mavros*`
+
+### Catkin Workspace
+
+Install catkin_tools for Ubuntu 20.04 using: `pip install "git+https://github.com/catkin/catkin_tools.git#egg=catkin_tools"`
+
+###Build
+
+Build AirSim \
+`git clone https://github.com/Microsoft/AirSim.git`\
+`cd AirSim`\
+`./setup.sh`\
+`./build.sh`\
+
+Setup the enviroment variables for ROS: \
+`echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc`\
+`source ~/.bashrc`\
+
+Build ROS Package:\
+`cd ros`\
+`catkin build`
+
+###Running
+Two different terminals are required to be open simultaneously. On the first terminal run:
+`source devel/setup.bash`\
+`roslaunch airsim_ros_pkgs airsim_node.launch`\
+
+In the second terminal run:\
+`roslaunch airsim_ros_pkgs rviz.launch`
+
 
