@@ -159,6 +159,8 @@ Two different terminals are required to be open simultaneously. On the first ter
 `source devel/setup.bash`\
 `roslaunch airsim_ros_pkgs airsim_node.launch`\
 
+# Note: start X Server before roslaunch
+
 In the second terminal run:\
 `roslaunch airsim_ros_pkgs rviz.launch`
 
