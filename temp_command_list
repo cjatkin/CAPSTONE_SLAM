@@ -61,6 +61,8 @@
    61  vulkaninfo
    62  cd ..
    63  meson setup <builddir> -Dvulkan-drivers=microsoft-experimental && cd build && ninja install
+
+
    64  history
    65  im_vehicle.py -v ArduCopter -f airsim-copter --console --map
    66  ls
@@ -107,6 +109,8 @@
   107  cd ros;
   108  catkin build;
   109  source devel/setup.bash;
+
+
   110  roslaunch airsim_ros_pkgs airsim_node.launch;
   111  roslaunch airsim_ros_pkgs rviz.launch;
   112  sudo apt-get libQt5Core
