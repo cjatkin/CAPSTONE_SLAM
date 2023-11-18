@@ -1,0 +1,343 @@
+1  sudo apt-get update
+    2  sudo apt-get install git
+    3  sudo apt-get install gitk git-gui
+    4  curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey | sudo gpg --dearmor -o /usr/share/keyrings/nvidia-container-toolkit-keyring.gpg   && curl -s -L https://nvidia.github.io/libnvidia-container/stable/deb/nvidia-container-toolkit.list |     sed 's#deb https://#deb [signed-by=/usr/share/keyrings/nvidia-container-toolkit-keyring.gpg] https://#g' |     sudo tee /etc/apt/sources.list.d/nvidia-container-toolkit.list   &&     sudo apt-get update
+    5  sudo apt-get install -y nvidia-container-toolkit
+    6  ls
+    7  git clone –recurse-submodules https://github.com/ArduPilot/ardupilot.git
+    8  git clone -–recurse-submodules https://github.com/ArduPilot/ardupilot.git
+    9  git clone --recurse-submodules https://github.com/ArduPilot/ardupilot.git
+   10  cd ardupilot
+   11  Tools/environment_install/install-prereqs-ubuntu.sh -y
+   12  . ~/.profile
+   13  cd Airsim/docker
+   14  ls
+   15  cd ..
+   16  ls
+   17  pwd
+   18  cd ardupilot/
+   19  sudo nvidia-ctk runtime configure
+   20  git clone -b 4.27 git@github.com:EpicGames/UnrealEngine.git
+   21  gh auth login -w
+   22  sudo apt-get gh
+   23  type -p curl >/dev/null || (sudo apt update && sudo apt install curl -y)
+   24  curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg && sudo chmod go+r /usr/share/keyrings/githubcli-archive-keyring.gpg && echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null && sudo apt update && sudo apt install gh -y
+   25  sudo apt update
+   26  gh auth login -w
+   27  git clone -b 4.27 git@github.com:EpicGames/UnrealEngine.git
+   28  cd ..
+   29  git clone -b 4.27 git@github.com:EpicGames/UnrealEngine.git
+   30  gh repo clone EpicGames/UnrealEngine
+   31  cd ardupilot/ArduCopter
+   32  sim_vehicle.py -w
+   33  cd ~/ardupilot/ArduCopter
+   34  ../Tools/autotest/sim_vehicle.py --map --console
+   35  sim_vehicle.py -v ArduCopter -f airsim-copter --console --map
+   36  cd ..
+   37  cd UnrealEngine/
+   38  ./Setup.ah
+   39  ./Setup.sh
+   40  ./GenerateProjectFiles.sh
+   41  make
+   42  git clone https://github.com/Microsoft/AirSim.git
+   43  cd AirSim
+   44  ./setup.sh
+   45  ./build.sh
+   46  cd ..
+   47  ./Engine/Binaries/Linux/UE4Editor
+   48  ./Engine/Binaries/Linux/UnrealEditor
+   49  cd ..
+   50  sudo aput update
+   51  sudo apt update
+   52  wsl xeyes
+   53  sudo ln -s /mnt/wslg/.X11-unix /tmp/.X11-unix
+   54  cd UnrealEngine/
+   55  ./Engine/Binaries/Linux/UnrealEditor
+   56  cd ..
+   57  . ~/.bashrc
+   58  cd UnrealEngine/
+   59  ./Engine/Binaries/Linux/UnrealEditor
+   60  ./Engine/Binaries/Linux/UnrealEditor -opengl14
+   61  vulkaninfo
+   62  cd ..
+   63  meson setup <builddir> -Dvulkan-drivers=microsoft-experimental && cd build && ninja install
+   64  history
+   65  im_vehicle.py -v ArduCopter -f airsim-copter --console --map
+   66  ls
+   67  cd ardupilot/
+   68  cd ArduCopter/
+   69  im_vehicle.py -v ArduCopter -f airsim-copter --console --map
+   70  sim_vehicle.py -v ArduCopter -f airsim-copter --console --map
+   71  gcc --version
+   72  cd ..
+   73  sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+   74  sudo apt install curl # if you haven't already installed curl
+   75  curl -sSL 'http://keyserver.ubuntu.com/pks/lookup?op=get&search=0xC1CF6E31E6BADE8868B172B4F42ED6FBAB17C654' | sudo apt-key add -
+   76  sudo apt update
+   77  sudo apt install ros-noetic-desktop-full
+   78  source /opt/ros/noetic/setup.bash
+   79  echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
+   80  source ~/.bashrc
+   81  ls
+   82  roscore
+   83  sudo apt install python3-rosdep python3-rosinstall python3-rosinstall-generator python3-wstool build-essential
+   84  sudo apt install python3-rosdep
+   85  sudo rosdep init
+   86  rosdep update
+   87  ls
+   88  pip install "git+https://github.com/catkin/catkin_tools.git#egg=catkin_tools"
+   89  git clone https://github.com/Microsoft/AirSim.git;
+   90  cd AirSim;
+   91  ./setup.sh;
+   92  ./build.sh;
+   93  echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
+   94  source ~/.bashrc
+   95  cd ros;
+   96  catkin build
+   97  catkin_make
+   98  source /opt/ros/noetic/setup.bash
+   99  catkin build
+  100  sudo apt-get install ros-noetic-tf2-sensor-msgs ros-noetic-tf2-geometry-msgs ros-noet
+  101  cd ..
+  102  sudo apt-get install ros-noetic-tf2-sensor-msgs ros-noetic-tf2-geometry-msgs ros-noet
+  103  cd ..
+  104  sudo apt-get install ros-noetic-tf2-sensor-msgs ros-noetic-tf2-geometry-msgs ros-noet
+  105  sudo apt-get install ros-noetic-tf2-sensor-msgs ros-noetic-tf2-geometry-msgs ros-noetic-mavros*
+  106  cd AirSim;
+  107  cd ros;
+  108  catkin build;
+  109  source devel/setup.bash;
+  110  roslaunch airsim_ros_pkgs airsim_node.launch;
+  111  roslaunch airsim_ros_pkgs rviz.launch;
+  112  sudo apt-get libQt5Core
+  113  sudo apt-get libQt5Core.so.5
+  114  sudo strip --remove-section=.note.ABI-tag /usr/lib64/libQt5Core.so.5
+  115  echo 'export LIBGL_ALWAYS_INDIRECT=0' >> ~/.bashrc
+  116  roslaunch airsim_ros_pkgs rviz.launch;
+  117  sudo strip --remove-section=.note.ABI-tag /usr/lib/x86_64-linux-gnu/libQt5Core.so.5
+  118  roslaunch airsim_ros_pkgs rviz.launch;
+  119  echo 'export LIBGL_ALWAYS_INDIRECT=0' >> ~/.bashrc
+  120  roslaunch airsim_ros_pkgs rviz.launch;
+  121  export WSL_HOST_IP=127.0.0.1
+  122  source devel/setup.bash
+  123  roslaunch airsim_ros_pkgs airsim_node.launch output:=screen host:=$WSL_HOST_IP
+  124  rviz
+  125  cd..
+  126  cd ..
+  127  sudo apt install ros-noetic-desktop ros-noetic-agni-tf-tools
+  128  rviz
+  129  sudo rosdep init
+  130  cd /etc/ros/rosdep/sources,list,d
+  131  cd /etc/ros/rosdep/sources.list.d
+  132  ls
+  133  rm 20-default.list
+  134  ls
+  135  rm 20-default.list
+  136  sudo rm 20-default.list
+  137  ls
+  138  cd \
+  139  sudo rosdep init
+  140  rosdep update
+  141  echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
+  142  roscore &
+  143  rviz
+  144  roscore &
+  145  roslaunch airsim_ros_pkgs airsim_node.launch output:=screen host:=$WSL_HOST_IP
+  146  source devel/setup.bash
+  147  export WSL_HOST_IP=127.0.0.1
+  148  source devel/setup.bash
+  149  roslaunch airsim_ros_pkgs airsim_node.launch output:=screen host:=$WSL_HOST_IP
+  150  echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
+  151  source ~/.bashrc
+  152  cd ros;
+  153  cd ardupilot/
+  154  cd ..
+  155  cd AirSim/
+  156  cd ros
+  157  roslaunch airsim_ros_pkgs airsim_node.launch output:=screen host:=$WSL_HOST_IP
+  158  catkin build;
+  159  source devel/setup.bash
+  160  roslaunch airsim_ros_pkgs airsim_node.launch output:=screen host:=$WSL_HOST_IP
+  161  cd AirSim/
+  162  cd ros
+  163  roslaunch airsim_ros_pkgs rviz.launch
+  164  ls
+  165  cd ..
+  166  sudo apt install ros-noetic-desktop-full
+  167  source /opt/ros/noetic/setup.bash
+  168  roslaunch airsim_ros_pkgs rviz.launch;
+  169  rviz
+  170  cd AirSim/
+  171  cd ros
+  172  roslaunch airsim_ros_pkgs rviz.launch;
+  173  ls
+  174  cd ..
+  175  ls
+  176  catkin build;
+  177  cd AirSim/
+  178  cd ros
+  179  ls
+  180  catkin build;
+  181  ls
+  182  cd \
+  183  ls
+  184  cd AirSim/ros
+  185  history
+  186  cd ..\
+  187  sudo apt-get install ros-noetic-tf2-sensor-msgs ros-noetic-tf2-geometry-msgs ros-noetic-mavros*
+  188  sudo apt-get install python-catkin-tools
+  189  pip install "git+https://github.com/catkin/catkin_tools.git#egg=catkin_tools"
+  190  cd AirSim/
+  191  ./setup.sh;
+  192  ./build.sh;
+  193  cd .
+  194  cd..
+  195  cd ..
+  196  sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+  197  sudo apt install curl
+  198  curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
+  199  sudo apt update
+  200  sudo apt install ros-noetic-desktop-full
+  201  source /opt/ros/noetic/setup.bash
+  202  echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
+  203  source ~/.bashrc
+  204  sudo apt install python3-rosdep python3-rosinstall python3-rosinstall-generator python3-wstool build-essential
+  205  sudo apt install python3-rosdep
+  206  sudo rosdep init
+  207  sudo rm /etc/ros/rosdep/sources.list.d/20-default.list
+  208  sudo rosdep init
+  209  rosdep update
+  210  cd ros;
+  211  cd A
+  212  ls
+  213  cd AirSim/
+  214  cd ros
+  215  catkin build
+  216  source devel/setup.bash;
+  217  roslaunch airsim_ros_pkgs airsim_node.launch;
+  218  cd AirSim/ros
+  219  source /opt/ros/noetic/setup.bash
+  220  roslaunch airsim_ros_pkgs rviz.launch;
+  221  ls -l
+  222  ls -all
+  223  cd logs/
+  224  ls -all
+  225  cd airsim_ros_pkgs/
+  226  ls
+  227  source devel/setup.bash
+  228  cd ..
+  229  source devel/setup.bash
+  230  roslaunch airsim_ros_pkgs rviz.launch
+  231  sudo apt-get install qt5-default
+  232  roslaunch airsim_ros_pkgs rviz.launch
+  233  .../platforms$ ldd libqxcb.so
+  234  roslaunch airsim_ros_pkgs rviz.launch
+  235  . ~/.profile
+  236  roslaunch airsim_ros_pkgs rviz.launch
+  237  ~/.bashrc
+  238  cd ..
+  239  ~/.bashrc
+  240  sudo ~/.bashrc
+  241  logout
+  242  source /opt/ros/noetic/setup.bash
+  243  cd AirSim/ros
+  244  roslaunch airsim_ros_pkgs rviz.launch;
+  245  ls
+  246  cd logs/
+  247  ls
+  248  cd airsim_ros_pkgs/
+  249  ls
+  250  pwd
+  251  cd ..
+  252  rospack find-tb_tables
+  253  catkin clean
+  254  catkin build
+  255  source devel/setup.bash;
+  256  roslaunch airsim_ros_pkgs airsim_node.launch;
+  257  ~/.bashrccd AirSim/ros
+  258  cd AirSim/ros
+  259  source /opt/ros/noetic/setup.bash
+  260  source devel/setup.bash;
+  261  roslaunch airsim_ros_pkgs airsim_node.launch;
+  262  cd ardupilot/
+  263  ls
+  264  cd ArduCopter/
+  265  sim_vehicle.py -v ArduCopter -f airsim-copter --console --map
+  266  cd AirSim/ros
+  267  roslaunch airsim_ros_pkgs rviz.launch;
+  268  source devel/setup.bash;
+  269  roslaunch airsim_ros_pkgs rviz.launch;
+  270  ifconfig
+  271  ipconfig
+  272  cd ardupilot/ArduCopter/
+  273  sim_vehicle.py -v ArduCopter -f airsim-copter --console --map
+  274  sim_vehicle.py -v ArduCopter -f airsim-copter --console --map --sim-address:192.168.0.66
+  275  sim_vehicle.py -v ArduCopter -f airsim-copter --console --map
+  276  sim_vehicle.py -v ArduCopter -f airsim-copter --console --map -A "--sim-address=192.168.0.66"
+  277  sim_vehicle.py -v ArduCopter -f airsim-copter --console --map
+  278  source ./AirSim/ros/devel/setup.bash
+  279  roslaunch airsim_tutorial_pkgs front_stereo_and_center_mono.launch
+  280  cd AirSim/ros
+  281  roslaunch airsim_tutorial_pkgs front_stereo_and_center_mono.launch
+  282  ls
+  283  roslaunch airsim_tutorial_pkgs front_stereo_and_center_mono.launch
+  284  cat ./devel/setup.bash
+  285  roslaunch airsim_tutorial_pkgs rviz.launch
+  286  source devel/setup.bash
+  287  roslaunch airsim_ros_pkgs rviz.launch
+  288  roslaunch airsim_tutorial_pkgs front_stereo_and_center_mono.launch
+  289  roslaunch airsim_tutorial_pkgs front_stereo_and_center_mono.launch host:=192.168.0.66
+  290  roslaunch airsim_tutorial_pkgs front_stereo_and_center_mono.launch
+  291  ifconfig
+  292  roslaunch airsim_tutorial_pkgs front_stereo_and_center_mono.launch
+  293  roslaunch airsim_tutorial_pkgs front_stereo_and_center_mono.launch output:=screen host:=127.0.0.1
+  294  roslaunch airsim_tutorial_pkgs front_stereo_and_center_mono.launch
+  295  roslaunch airsim_tutorial_pkgs front_stereo_and_center_mono.launch host:=192.168.0.66
+  296  roslaunch airsim_tutorial_pkgs front_stereo_and_center_mono.launch host:=127.0.0.1
+  297  ls
+  298  cd AirSim/ros
+  299  catkin build airsim_tutorial_pkgs
+  300  source ./AirSim/ros/devel/setup.bash
+  301  source ./devel/setup.bash
+  302  roscd airsim_tutorial_pkgs
+  303  cd ..
+  304  roslaunch airsim_ros_pkgs airsim_node.launch
+  305  source devel/setup.bash
+  306  roslaunch airsim_ros_pkgs airsim_node.launch
+  307  roslaunch airsim_ros_pkgs airsim_node.launch host:=192.168.0.66
+  308  roslaunch airsim_ros_pkgs airsim_node.launch host:=127.0.0.1
+  309  rostopic list
+  310  rosservice list
+  311  clear
+  312  ls
+  313  cd ardupilot/
+  314  ls
+  315  cd ArduCopter/
+  316  ls
+  317  sim_vehicle.py -v ArduCopter -f airsim-copter --console --map
+  318  rosrun airsim sim_vehicle.py -v ArduCopter -f airsim-copter --console --map
+  319  rospack
+  320  rospack help
+  321  rospakc list
+  322  rospack list
+  323  rostopic echo
+  324  rostopic echo /airsim_node/drone_1/lidar/LidarCustom
+  325  rostopic list /
+  326  rostopic echo /airsim_node/drone_1/lidar/LidarCustom
+  327  ros topic list -t
+  328  rostopic list -t
+  329  rostopic list /
+  330  rostopic echo /airsim_node/drone_1/lidar/LidarCustom
+  331  cd ..
+  332  ls
+  333  cd catkin_ws/
+  334  roscore
+  335  sudo apt-get install ros-noetic-rosbag
+  336  catkin_make
+  337  catkin build
+  338  cd ..
+  339  ls
+  340  cd AirSim/ros
+  341  catkin build
+  342  rospack list-names
+  343  history
